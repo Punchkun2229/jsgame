@@ -17,10 +17,13 @@
                 this.speed = speed
             }
             moveAndPaint(diff){
+
                 if(this.x >= canvas.width || this.y >= canvas.height)
                     this.heading += 90
+
                 else if(this.x <= 0 || this.y <= 0)
                     this.heading -= 90
+                    
                 let s = (this.speed * diff)/1000 //s =vt
                 let degree = Math.PI * this.heading / 180;
                 this.x += Math.round(Math.cos(degree) * s)
