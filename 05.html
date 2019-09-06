@@ -6,6 +6,16 @@
         </canvas>
     </body>
         <script>
+        class Sprite {
+            constructor(name){
+                this.name = name
+            }
+            greet(){
+                console.log('My Name Is', this.name)
+            }
+        }
+        let s1 = new Sprite("A1")
+        s1.greet()
             let canvas = document.getElementById("shut up")
             let x = 0;
             let direction = 1;
